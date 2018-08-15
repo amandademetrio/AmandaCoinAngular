@@ -1,0 +1,14 @@
+<div class="card p-3">
+    <h5 class="mb-4">Sell AmandaCoins</h5>
+    <p>Current AmandaCoin value: ${{coinValue}}</p>
+    <p>Number of AmandaCoin owned: {{current_balance}}</p>
+    <form class="form-inline" (submit)="onSell(sellingNumber)">
+        <div class="form-group mx-sm-3 mb-2">
+          <input type="number" class="form-control" name="sellingNumber" [(ngModel)]="sellingNumber">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Sell!</button>
+      </form>
+      <div *ngIf="failure" class="alert alert-danger" role="alert">
+          You're not allowed to sell more coins than you own!
+      </div>
+  </div>

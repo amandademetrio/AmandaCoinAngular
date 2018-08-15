@@ -1,0 +1,11 @@
+<div class="card p-3">
+    <h5 class="mb-4">Buy AmandaCoins</h5>
+    <p>Current AmandaCoin value: ${{coinValue}}</p>
+    <p>Number of AmandaCoin owned: {{current_balance}}</p>
+    <form class="form-inline" (submit)="onBuy(buyingNumber)">
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="number" class="form-control" name="buyingNumber" [(ngModel)]="buyingNumber">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Buy!</button>
+    </form>
+  </div>

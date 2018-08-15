@@ -1,0 +1,18 @@
+<div class="card p-3">
+  <h5 class="mb-4">Mine AmandaCoins</h5>
+  <p>Here you can mine AmandaCoins by answering the questions:</p>
+  <p>What is the scariest thing in the world?</p>
+  <form class="form-inline" (submit)="onMine(miningAnswer)">
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="text" class="form-control" name="miningAnswer" [(ngModel)]="miningAnswer"/>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Mine!</button>
+  </form>
+  <div *ngIf="success" class="alert alert-success" role="alert">
+    You've earned 1 AmandaCoin!
+  </div>
+  <div *ngIf="failure" class="alert alert-danger" role="alert">
+    Wrong answer! Try Again!
+  </div>
+</div>
+  

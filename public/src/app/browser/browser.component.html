@@ -1,0 +1,22 @@
+<div class="card p-3">
+  <h5 class="mb-4">Browse the Ledger</h5>
+  <p>Browse all AmandaCoin transactions:</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Action</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Value</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of list_of_transactions">
+        <td>{{transaction.action}}</td>
+        <td>{{transaction.amount}}</td>
+        <td>{{transaction.value}}</td>
+        <td><button class="btn btn-secondary btn-sm" [routerLink]="['/details',transaction.id]">Details</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
